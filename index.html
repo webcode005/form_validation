@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form onsubmit="return validate_form_details()" action="asdfsd.php" method="post">
+
+        <input type="text" id="name"  name="name">
+        <span id="nerror"></span>
+        <input type="text" id="email"  name="email">
+        <input type="text" id="phone"  name="phone">
+        <input type="submit" value="submit">
+        </form>
+
+    <script>
+        function validate_form_details()
+{
+    
+    if(document.getElementById('name').value==='')
+    {
+        //alert('Please Select Name Type');
+        document.getElementById('nerror').innerHTML="<span style='color:red;'>Name Is Required</span>";
+        return false;
+    }
+    if(document.getElementById('email').value==='')
+    {
+        alert('Please Select Email Type');
+        return false;
+    }
+    
+    else if(document.getElementById('phone').value==='')
+    {
+        alert('Please Select phone');
+        return false;
+    }
+    
+    return true;
+
+}
+
+    </script>
+</body>
+</html>
